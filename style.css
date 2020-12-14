@@ -1,0 +1,21 @@
+#header{
+    widows: 100%;
+    min-height: 110px;
+    background-color: rgb(205, 215, 233);
+}
+.logo {
+    float:left;
+    padding: 0 100px;
+
+}
+.menu ul{
+    list-style-type: none;
+    float: right;
+    margin-right: 100px;
+    margin-top: 40px;
+}
+.menu ul li{
+    display: inline;
+    padding:20px;
+    margin: 0 5px;
+}
