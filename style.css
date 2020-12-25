@@ -1,21 +1,103 @@
-#header{
-    widows: 100%;
-    min-height: 110px;
-    background-color: rgb(205, 215, 233);
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
 }
-.logo {
-    float:left;
-    padding: 0 100px;
+body{
 
 }
-.menu ul{
-    list-style-type: none;
-    float: right;
-    margin-right: 100px;
-    margin-top: 40px;
+header{
+    min-height: 100px;
+    background-color: rgb(196, 174, 140);
 }
-.menu ul li{
-    display: inline;
-    padding:20px;
-    margin: 0 5px;
+.logo {
+   
+    float:left;
+    padding: 0 200px;
+
 }
+nav{
+    
+}
+
+nav ul{
+
+}
+
+nav ul li{
+    float: left;
+    line-height: 100px; /*text in the center*/
+}
+
+nav ul li a{
+    display: block;
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    padding: 0 20px;
+
+
+}
+
+nav ul li a:hover{
+    color:brown;
+}
+footer{
+    position:absolute;    /*rreshti 47 dhe 48 e definojne poziten e footerit*/
+    bottom: 0;
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-color: rgb(196, 174, 140);
+}
+.inner_footer{/*kontrolloje edhe nje here qita a eshte funksionale*/
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+}
+.inner_footer .logo{
+   padding-left: 5%;
+
+}
+.inner_footer .footer_third{
+   
+  width: calc(21.666666667% - 20px);
+  display: inline;
+    float:left;
+    height:100%
+}
+.inner_footer .footer_third:last-child{
+    margin-right:0;
+}
+.inner_footer .footer_third h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:18px;
+    color: brown;
+    display:block;
+    width: 100%;
+    margin-bottom:20px;
+}
+.inner_footer .footer_third .socials a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    display:block;
+    color: black;
+    font-weight:200;
+    width: 100%;
+    padding-bottom:20px;
+}
+.inner_footer .footer_third .socials li{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
+}
+.inner_footer .footer_third .menu a{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display:block;
+    color: black;
+    padding-bottom:10px;
+}
+
