@@ -355,6 +355,7 @@ p {
 margin-left: 20%;
 margin-top: 30px;
 margin-bottom: 30px;
+background-color:white;
 }
 .menuja h1{
     font-family: 'Dancing Script', cursive ;
@@ -527,4 +528,62 @@ font-family: 'EB Garamond', serif;
     color: #888;
   }
  
-  
+  /*CSS per faqe blog*/
+  .row{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+  .blog{
+    margin :15px 0;
+
+}
+
+.blog img{
+    max-height: 70%;
+    max-width: 70%;
+    margin-left:15%;
+
+}
+p{
+    text-align: left;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+.col-lg-4{
+    max-width: 19%;
+    background-color: #fff;
+   margin-left: 140px;
+    
+
+}
+
+.blog-inf{
+    max-width: 200px;
+    background-color: #fff;
+    margin-left: 30px;
+
+}
+.blog-inf h3{
+   font-family: 'Dancing Script', cursive;
+}
+.blog-inf p{
+    font-family: 'EB Garamond', serif;
+}
+/*
+.blog-inf h3{
+    font-size: 1.5rem;
+    margin:10px 0;
+    text-transform: capitalize;
+}
+*/
+.blog-inf span{
+    display: block;
+    margin: 20px 0;
+    color: #343e40;
+    text-transform: capitalize;
+    font-weight: 600;
+}
