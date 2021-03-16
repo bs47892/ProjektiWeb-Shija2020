@@ -1,0 +1,89 @@
+<?php include("includes/header.php"); ?>
+<!--********************Ketu fillon tagu per content*****************************-->
+<section class="body02">
+    <div class="about-section">
+        <div class="inner-container">
+            <h1>RRETH NESH!</h1>
+            <h2>Krenar që ju shërbejmë.</h2>
+            <p class="text"><br><br>
+                E themeluar në vitin 2000 nga themeluesit Fitore, Besarta dhe Arlind, <br>Shija është
+                e njohur për revolucionarizimin në mënyrën se si njerëzit hanë dhe shijojnë ushqimin.<br>
+                Ne krenohemi me aftësinë tonë për të zbuluar aromat më unike nga e gjithë bota dhe t'i ndajmë ato me ju. <br>Bashkohu me ne.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--**************************Ketu fillon footeri**********************************-->
+<footer class="footer">
+    <div class="inner_footer">
+        <div class="logo">
+            <img src="images/logo-png.png" alt="llogo" width="110" height="125" />
+        </div>
+        <div class="footer_third">
+
+            <h3>Na ndiqni: </h3>
+            <p>
+
+            </p>
+            <div class="socials">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_third">
+            <h3>Faqet: </h3>
+            <p>
+
+            </p>
+            <div class="menu">
+                <ul>
+                    <li><a href="shija.html">Ballina</a></li>
+                    <li><a href="RrethNesh.html">Rreth Nesh</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="kontakti.html">Kontakti</a></li>
+                    <li><a href="blog.html">Blogu</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_third">
+            <h3>Na kontaktoni: </h3>
+            <p>
+
+            </p>
+            <div class="kontakti">
+                <i class="fa fa-phone"> +383 44 111 111</i>
+                <i class="fa fa-envelope"> info@shija-ks.com</i>
+            </div>
+        </div>
+
+
+
+
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<?php include("includes/header.php"); ?>
+<div class="menuja">
+    <h1>Menu</h1>
+    <div class="titull">
+        <h2>Salmon</h2>
+    </div>
+    <ul>
+        <li>Salmon Shija---------------------------------------------------4.30</li>
+        <li>Salmon i Tymosur--------------------------------------------4.00</li>
+        <li>Salmon me Rissoto-------------------------------------------4.00</li>
+        <li>Salmon Pikant--------------------------------------------------4.00</li>
+    </ul>
+    <div class="titull">
+        <h2>Mish</h2>
+    </div>
+    <ul>
+        <li>Filet Pule---------------------------------------------------------3.80</li>
+        <li>Gishtërinj Pule-------------------------------------------------3.80</li>
+        <li>Gishtërinj Peshku----------------------------------------------3.80</li>
+
+    </ul>
+    <div class="titull">
+        <h2>Sallatat</h2>
+    </div>
+    <ul>
+        <li>Sallatë Shope-----------------------------------------------------2.30</li>
+        <li>Sallatë Greke-----------------------------------------------------2.30</li>
+        <li>Sallatë e Gjelbër-------------------------------------------------2.30</li>
+        <li>Sallatë Mikse-----------------------------------------------------2.30</li>
+        <li>Sallatë Salmon---------------------------------------------------3.00</li>
+        <li>Sallatë Pule-------------------------------------------------------3.00</li>
+        <li>Sallatë Burger----------------------------------------------------3.00</li>
+        <li>Shef Sallatë--------------------------------------------------------3.50</li>
+        <li>Steak Sallatë-------------------------------------------------------4.90</li>
+        <li>Mozzarella Sallatë------------------------------------------------3.00</li>
+
+    </ul>
+    <div class="titull">
+        <h2>Pijet</h2>
+    </div>
+    <ul>
+        <li>Espresso-------------------------------------------------------------0.70</li>
+        <li>Makiato e vogël---------------------------------------------------0.70</li>
+        <li>Makiato e madhe-------------------------------------------------1.00</li>
+        <li>Kapuçino-----------------------------------------------------------1.00</li>
+        <li>Kafe Vanilla--------------------------------------------------------1.00</li>
+        <li>Ness Kafe-----------------------------------------------------------1.00</li>
+        <li>Ujë Mineral--------------------------------------------------------0.80</li>
+        <li>Limonadë-----------------------------------------------------------1.50</li>
+        <li>Lëngje të frutave--------------------------------------------------1.00</li>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
+<!--**************************Ketu fillon footeri**********************************-->
+<footer class="footer">
+    <div class="inner_footer">
+        <div class="logo">
+            <img src="images/logo-png.png" alt="llogo" width="110" height="125" />
+        </div>
+        <div class="footer_third">
+
+            <h3>Na ndiqni: </h3>
+            <p>
+
+            </p>
+            <div class="socials">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_third">
+            <h3>Faqet: </h3>
+            <p>
+
+            </p>
+            <div class="menu">
+                <ul>
+                    <li><a href="shija.html">Ballina</a></li>
+                    <li><a href="RrethNesh.html">Rreth Nesh</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="kontakti.html">Kontakti</a></li>
+                    <li><a href="blog.html">Blogu</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_third">
+            <h3>Na kontaktoni: </h3>
+            <p>
+
+            </p>
+            <div class="kontakti">
+                <i class="fa fa-phone"> +383 44 111 111</i>
+                <i class="fa fa-envelope"> info@shija-ks.com</i>
+            </div>
+        </div>
+
+
+
+
+
+</footer>
+</body>
+
+</html>
