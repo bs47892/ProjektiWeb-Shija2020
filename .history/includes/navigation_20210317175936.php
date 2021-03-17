@@ -13,13 +13,13 @@
                       </ul>
                   </nav>
                   <?php
-                  if(isset($_SESSION['user_id'])){
+                  if(!empty($_SESSION['user_id'])){
                       ?>
                   <li><a href="logout.php" class="rightlog">Logout</a></li>
                   <?php
                   }else{
                       ?>
-                      <li class="rightlog"><a href="login.php" >Login</a>/<a href="signup.php">Sign Up</a></li>
+                      <li><a href="login.php" class="rightlog">Login</a></li>
                       <?php
                   }
                   ?>

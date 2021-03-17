@@ -1,36 +1,7 @@
-<?php include("includes/header.php");
-
-if (isset($_POST['submit'])) {
-   
-  $name = mysqli_real_escape_string($dbc, trim($_POST['name']));
-  $email = mysqli_real_escape_string($dbc, trim($_POST['email']));
-  $phone_number = mysqli_real_escape_string($dbc, trim($_POST['phone_number']));
-  $web = mysqli_real_escape_string($dbc, trim($_POST['web_url']));
-  $message = mysqli_real_escape_string($dbc, trim($_POST['message']));
-
-  if (!empty($name) && !empty($email) && !empty($message)) {
-    global $dbc;
-
-      $query = "INSERT INTO contacts (name, email, phone_number, web_url, message) VALUES ('$name', '$email', '$phone_number', '$web', '$message')";
-      mysqli_query($dbc, $query);
-  
-      echo '<p>Your message been successfully sent. </p>';
-  
-      mysqli_close($dbc);
-      exit();
-   
-  }
-  else {
-    echo '<p class="error">You must enter all required data </p>';
-  }
-}
-
-mysqli_close($dbc);
-?>
-
+<?php include("includes/header.php"); ?>
 <section>
   <div class="containerc">
-    <form id="contact"  method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <form id="contact" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
       <h3>CONTACT</h3>
       <h4>Contact me down below!</h4>
       <fieldset>
@@ -55,5 +26,4 @@ mysqli_close($dbc);
     </form>
   </div>
 </section>
-
-<?php include("includes/footer.php"); ?>
+<?php include("includes/footer.php");?>

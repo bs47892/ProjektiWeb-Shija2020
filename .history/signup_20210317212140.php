@@ -1,0 +1,101 @@
+<?php include("includes/header.php");
+
+if(isset($_POST['submit'])){
+
+    $first_name=mysqli_real_escape_string($dbc,trim($_POST['lastname']));
+    $last_name=mysqli_real_escape_string($dbc,trim($_POST['firstname']));
+    $email=mysqli_real_escape_string($dbc,trim($_POST['email']));
+    $password1=mysqli_real_escape_string($dbc,trim($_POST['password1']));
+    $password2=mysqli_real_escape_string($dbc,trim($_POST['password2']));
+
+    if(!empty($first_name)&&!empty($last_name)&&!empty($email)&&!empty($password1)&&!empty($password2)&&(password1==))
+    global $dbc;
+    $query ="SELECT * FROM users WHERE email ='$email'"; //kontrollon ne db per user ekzistues
+    $data=mysqli_query($dbc, $query);
+    if(mysqli_num_row($data)==0){ //nese nuk ka
+       $query=""
+       mysqli_query($dbc,$query);
+
+    //Confirm succes with the user
+    echo '<p> Your account has been successfully created. You\'re now ready to <a href="login.php">log in</a>.</p>';
+
+    mysqli_close($dbc);
+    exit();
+    }
+    else{
+        //An account already exists for this username, so display an error message
+        echo '<p class="error">You must enter all of the sign-up data, including the desired password twice.</p>';
+
+    }
+}
+mysqli_close($dbc);
+?>
+
+
+
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<div class="login100-pic js-tilt" data-tilt>
+				<img src="images/img-01.png" alt="IMG">
+			</div>
+
+			<form class="login100-form validate-form">
+				<span class="login100-form-title">
+					Register
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="First name is required">
+					<input class="input100" type="text" name="firstname" placeholder="First Name">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+					</span>
+				</div>
+
+                <div class="wrap-input100 validate-input" data-validate="Last name is required">
+					<input class="input100" type="text" name="lastname" placeholder="Last Name">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+					</span>
+				</div>
+
+                <div class="wrap-input100 validate-input" data-validate="Email is required">
+					<input class="input100" type="text" name="email" placeholder="Email">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+					</span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Password is required">
+					<input class="input100" type="password" name="pass" placeholder="Password">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+					</span>
+				</div>
+
+                <div class="wrap-input100 validate-input" data-validate="Confirm Password is required">
+					<input class="input100" type="password" name="confirm_password" placeholder="Confirm Password">
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+					</span>
+				</div>
+
+				<div class="container-login100-form-btn">
+				<input type="submit" class="login100-form-btn" value="Regjistrohu">
+				</div>
+
+				<div class="text-center p-t-136">
+					<a class="txt2" href="login.php">
+						Keni nje llogari?
+						<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,20 +1,18 @@
 <?php include("includes/header.php");
 
-$error_msg = "";
+$error_msg = " ";
 
 if (!isset($_SESSION['user_id'])) {
-	
 	if (isset($_POST['submit'])) {
-		
 		global $dbc;
-		
+
 		$user_email = mysqli_real_escape_string($dbc, trim($_POST['email']));
 		$user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
 
 		if (!empty($user_email) && !empty($user_password)) {
-			
-			// Look up the username and password in the database
-			$query = "SELECT id, email FROM users WHERE email = '$user_email' AND password = $user_password";
+
+			//Look up the username and password in the database
+			$query = "SELECT id, email FROM users WHERE email = '$user_email'AND password = $user_password";
 			$data = mysqli_query($dbc, $query);
 
 			if (mysqli_num_rows($data) == 1) {
@@ -23,21 +21,22 @@ if (!isset($_SESSION['user_id'])) {
 				$_SESSION['email'] = $row['email'];
 
 				$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/index.php';
-				header('Location: ' . $home_url); 
+				header('Location: ' . $home_url);
 			} else {
-				// The username/password are incorrect so set an error message
-				$error_msg = 'Na vjen keq, duhet të vendosni një emër përdoruesi dhe fjalëkalim të vlefshëm për t\'u kyçur.';
+				//The username/pasword are incorrect so set an error message
+				$error_msg = "Vendosni nje emer perdoruesi dhe fjalkalimi te vlefshem per t'u kyqur.";
 			}
-		} else {
-			$error_msg = "Ju lutem shenoni emailin dhe fjalekalimit për tu kyçur";
+		}else {
+			$error_msg = "Ju lutem shenoni emailin dhe fjalekalimin per tu kyqur";
 		}
 	}
 }
 
+if(empty($_SESSION['user_id'])){
+	echo $_SESSION['user_id'];
 
-	if(empty($_SESSION['user_id'])){
+
 ?>
-
 <div class="limiter">
 	<div class="container-login100">
 		<div class="wrap-login100">
@@ -45,12 +44,12 @@ if (!isset($_SESSION['user_id'])) {
 				<img src="images/img-01.png" alt="IMG">
 			</div>
 
-			<form class="login100-form validate-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+			<form class="login100-form validate-form">
 				<span class="login100-form-title">
 					Member Login
 				</span>
 
-				<div class="wrap-input100 validate-input" data-validate="Email valide : ex@abc.xyz">
+				<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
 					<input class="input100" type="text" name="email" placeholder="Email">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
@@ -59,7 +58,7 @@ if (!isset($_SESSION['user_id'])) {
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Password is required">
-					<input class="input100" type="password" name="password" placeholder="Password">
+					<input class="input100" type="password" name="pass" placeholder="Password">
 					<span class="focus-input100"></span>
 					<span class="symbol-input100">
 						<i class="fa fa-lock" aria-hidden="true"></i>
@@ -67,7 +66,9 @@ if (!isset($_SESSION['user_id'])) {
 				</div>
 
 				<div class="container-login100-form-btn">
-					<input type="submit" name="submit" class="login100-form-btn" value="Login">
+					<button class="login100-form-btn" type="submit">
+						Login
+					</button>
 				</div>
 
 				<div class="text-center p-t-12">
@@ -80,8 +81,8 @@ if (!isset($_SESSION['user_id'])) {
 				</div>
 
 				<div class="text-center p-t-136">
-					<a class="txt2" href="signup.php">
-						Krijoni një llogari
+					<a class="txt2" href="#">
+						Create your Account
 						<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 					</a>
 				</div>
@@ -89,11 +90,11 @@ if (!isset($_SESSION['user_id'])) {
 		</div>
 	</div>
 </div>
-<?php 
-	} 
-	else {
-		echo 'Jeni kyçur si'. $_SESSION['email'];
-	}
-
+<?php
+}
+else{
+	echo 'Jeni kyqur si'.$_SESSION['email'];
+	echo $_SESSION['user_id'];
+}
 ?>
 <?php include("includes/footer.php"); ?>

@@ -15,7 +15,7 @@
                   <?php
                   if(isset($_SESSION['user_id'])){
                       ?>
-                  <li><a href="logout.php" class="rightlog">Logout</a></li>
+                  <li><a href="logout.php" class="rightlog"><?php echo  $_SESSION['email']. ">";?>Logout</a></li>
                   <?php
                   }else{
                       ?>

@@ -28,6 +28,8 @@ if (isset($_POST['submit'])) {
 mysqli_close($dbc);
 ?>
 
+?>
+
 <section>
   <div class="containerc">
     <form id="contact"  method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">

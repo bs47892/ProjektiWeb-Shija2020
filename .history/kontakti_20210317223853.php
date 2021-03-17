@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
   if (!empty($name) && !empty($email) && !empty($message)) {
     global $dbc;
 
-      $query = "INSERT INTO contacts (name, email, phone_number, web_url, message) VALUES ('$name', '$email', '$phone_number', '$web', '$message')";
+      $query = "INSERT INTO contact (name, email, phone_number, web_url, message) VALUES ('$name', '$email', '$phone_number', '$web', '$message')";
       mysqli_query($dbc, $query);
   
       echo '<p>Your message been successfully sent. </p>';
@@ -26,6 +26,8 @@ if (isset($_POST['submit'])) {
 }
 
 mysqli_close($dbc);
+?>
+
 ?>
 
 <section>
