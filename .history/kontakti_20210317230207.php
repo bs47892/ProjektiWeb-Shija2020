@@ -1,5 +1,5 @@
 <?php include("includes/header.php");
-$message = '';
+
 if (isset($_POST['submit'])) {
    
   $name = mysqli_real_escape_string($dbc, trim($_POST['name']));
@@ -14,19 +14,18 @@ if (isset($_POST['submit'])) {
       $query = "INSERT INTO contacts (name, email, phone_number, web_url, message) VALUES ('$name', '$email', '$phone_number', '$web', '$message')";
       mysqli_query($dbc, $query);
   
-      $message = "<h5 class='message'>Your message been successfully sent.</h5>";
-     
-        echo $message;
-        
+      echo '<p>Your message been successfully sent. </p>';
+  
       mysqli_close($dbc);
       exit();
    
   }
   else {
     $message = "You must enter all required data";
+    echo '<p class="error"> </p>';
   }
 }
-$_SESSION['message'] = $message;
+$_SESSION['error'] = $message;
 mysqli_close($dbc);
 ?>
 
@@ -34,9 +33,6 @@ mysqli_close($dbc);
 
 <section>
   <div class="containerc">
-  <?php if(isset($_SESSION['message'])){
-  echo $_SESSION['message'];
-  } ?>
     <form id="contact"  method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
       <h3>CONTACT</h3>
       <h4>Contact me down below!</h4>

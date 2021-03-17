@@ -14,10 +14,10 @@ if (isset($_POST['submit'])) {
       $query = "INSERT INTO contacts (name, email, phone_number, web_url, message) VALUES ('$name', '$email', '$phone_number', '$web', '$message')";
       mysqli_query($dbc, $query);
   
-      $message = "<h5 class='message'>Your message been successfully sent.</h5>";
-     
-        echo $message;
-        
+      $message = "Your message been successfully sent.";
+      if(isset($_SESSION['message'])){
+        echo $_SESSION['message'];
+        } 
       mysqli_close($dbc);
       exit();
    
